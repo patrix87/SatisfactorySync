@@ -1,0 +1,1 @@
+start powershell.exe -noprofile -executionpolicy bypass -file "SyncFactory.ps1"
