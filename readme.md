@@ -11,6 +11,7 @@ I hope you enjoy it.
 - A shared cloud folder with write access with your friends like Google Drive / One Drive / Dropbox etc.
 - The Google Drive / One Drive / Dropbox etc, desktop application to sync the folder.
 - Some very basic skills in scripting *(changing paths in variables)
+- PowerShell
 
 # What it does : 
 
