@@ -18,7 +18,7 @@ This script will take you local save file and compare it with a cloud shared fil
 
 # How to configure it : 
 
-- Once you have downloaded the repository extract it directly in your cloud synced folder 
+- Once you have downloaded the repository extract the content of the SatisfactorySync-master folder directly in your cloud synced folder 
 *not just the script, the 7z and the other 2 empty folder as well.*
 - Each user should then copy the content of the script folder somewhere on their computer.
 - Once you have your own copy of the script folder you must adjust the different paths and variables to match your local configuration. *(Details in the .ps1 script itself.)*
