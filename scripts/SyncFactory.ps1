@@ -8,17 +8,18 @@
 #---------------------------------------------------------
 
 # Variables you should change.
-$cloudPath="${env:UserProfile}+"\Google Drive\Satisfactory"																			#Path of the cloud sync folder on your Google Drive or DropBox
-$clientName=${env:UserName}
-$epicUserName='Edit Me EpicUsername'																													#Your name / nickname *(Used for naming backups) formating : "nickname" OR ${env:UserName} for the environment variable.
+$cloudPath=${env:UserProfile} + "\Google Drive\Satisfactory"	#Path of the cloud sync folder on your Google Drive or DropBox
+$clientName=${env:UserName}	#Your name / nickname *(Used for naming backups) formating : "nickname" OR ${env:UserName} for the environment variable.
+$guid = Get-ChildItem "${env:localAppData}\FactoryGame\Saved\SaveGames\" | Where-Object {$_.Name -ne 'Common'} | Select-Object -Property Name	#Guid forsave folder
+$guid = $guid.Name
 
 #Variables you should probably not change.					
 							
-$localSave="${env:UserProfile}+"\AppData\Local\FactoryGame\Saved\SaveGames\$epicUserName\SharedGame.sav"		#Path to the local save FILE, Don't forget to edit the part for the ID folder that look like this : 289339e8e418470095a90ceeca947834
-$cloudSave=$cloudPath+"\SharedGame\SharedGame.sav"																							#Path to the cloud save FILE
-$backupPath=$cloudPath+"\Backups"																											#Path to the cloud backups FOLDER
-$backupDays="14"																															#Number of days of backups to keep.
-$7zExec=$cloudPath+"\7z\7za.exe"																											#Path to 7zip
+$localSave="${env:localAppData}\FactoryGame\Saved\SaveGames\$guid\SharedGame.sav"	#Path to the local save FILE, Don't forget to edit the part for the ID folder that look like this : 289339e8e418470095a90ceeca947834
+$cloudSave=$cloudPath+"\SharedGame\SharedGame.sav"	#Path to the cloud save FILE
+$backupPath=$cloudPath+"\Backups"	#Path to the cloud backups FOLDER
+$backupDays="14"	#Number of days of backups to keep.
+$7zExec=$cloudPath+"\7z\7za.exe"	#Path to 7zip
 
 #Do not modify below this line
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
